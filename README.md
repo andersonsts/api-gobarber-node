@@ -22,40 +22,43 @@
 
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-executar">Executar</a>
 </p>
 
 ## :rocket: Tecnologias
 
-Este projeto foi desenvolvido no [Bootcamp GoStack - Rocketseat](https://rocketseat.com.br/bootcamp), com as seguintes tecnologias:
+Este projeto utiliza as seguintes tecnologias:
 
--  [ReactJS](https://reactjs.org/)
--  [Redux](https://redux.js.org/)
--  [Redux-Saga](https://redux-saga.js.org/)
--  [React Router Dom](https://github.com/ReactTraining/react-router)
--  [Axios](https://github.com/axios/axios)
--  [History](https://www.npmjs.com/package/history)
--  [Immer](https://github.com/immerjs/immer)
--  [Polished](https://polished.js.org/)
--  [Rocketseat/unform](https://github.com/Rocketseat/unform)
--  [React-Toastify](https://fkhadra.github.io/react-toastify/)
--  [React-Perfect-Scrollbar](https://github.com/goldenyz/react-perfect-scrollbar)
--  [styled-components](https://www.styled-components.com/)
--  [React-Icons](https://react-icons.netlify.com/)
--  [Reactotron](https://infinite.red/reactotron)
--  [Date-fns](https://date-fns.org/v1.30.1)
+-  [NodeJS](https://nodejs.org/en/)
+-  [ExpressJS](https://expressjs.com/)
+-  [Cors](https://github.com/expressjs/cors)
+-  [Sequelize](https://sequelize.org/)
+-  [JWT](https://github.com/auth0/node-jsonwebtoken)
+-  [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
+-  [Mongoose](https://mongoosejs.com/)
+-  [Multer](https://github.com/expressjs/multer)
+-  [NodeMailer](https://github.com/nodemailer/nodemailer)
+-  [Bee-Queue](https://github.com/bee-queue/bee-queue#processing-jobs)
+-  [Sentry](https://sentry.io/welcome/)
+-  [Nodemon](https://nodemon.io/)
+-  [Sucrase](https://github.com/alangpierce/sucrase)
+-  [Docker](https://www.docker.com/)
+-  [Postgress](https://hub.docker.com/_/postgres)
+-  [MongoDB](https://hub.docker.com/_/mongo)
+-  [Redis](https://hub.docker.com/_/redis/)
+-  [Youch](https://github.com/poppinss/youch)
 -  [Yup](https://github.com/jquense/yup)
+-  [Dotenv](https://www.npmjs.com/package/dotenv)
+-  [Date-fns](https://date-fns.org/)
 -  [VS Code][vc] com [EditorConfig][vceditconfig], [ESLint][vceslint] e [Prettier](https://github.com/prettier/prettier-eslint)
 
-## :bookmark_tabs: Requisitos
-Antes de executar a aplicação, insira em seu terminal o comando abaixo para iniciar
-a api utilizando [json-server](https://github.com/typicode/json-server).
+## :key: Requisitos
 
-```bash
-# Executa a api na porta 3333
-$ json-server server.json -p 3333 -w
 
-```
+## :computer: Funcionalidades
+Essa API possui as seguintes funcionalidades:
+
 
 ## :information_source: Executar
 Para clonar e executar essa aplicação você precisa do [Git](https://git-scm.com), [Node.js v10.16][nodejs] ou superior + [Yarn v1.13][yarn] ou superior instalado em sua máquina. Em seu terminal de comando, execute:
@@ -71,7 +74,7 @@ $ cd api-gobarber-node
 $ yarn install
 
 # Execute a aplicação
-$ yarn start
+$ yarn dev
 ```
 
 ---
