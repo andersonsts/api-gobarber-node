@@ -1,89 +1,88 @@
-# CONCEITOS DOCKER
-- Criação de ambientes isolados (container)
-- Containers expõe portas para comunicação
-- Imagem: Tecnologias que podem ser inseridas dentro de um container. Ex:
-          MySQL, Postgres, Mongo...
-- Container: Instancia de uma imagem. Ex: 3 BD's Postgres usando a imagem
-             Postgres.
-- Docker Registry (Docker Hub): Registro onde ficam todas as imagens do Docker.
-  - Docker file: Receita para montagem de uma imagem.
+<h1 align="center">
+    <img alt="GoBarber" src="https://res.cloudinary.com/andersonsts/image/upload/v1584495130/barber_uoxxvt.png" />
+    <br />
+    API - GoBarber - NodeJS
+</h1>
 
-# CONCEITOS SEQUELIZE
-- É um ORM para Nodejs e bancos relacionais como Postgres, Mysql
+<h4 align="center">
+  :barber: Sistema para agendamento de serviços de beleza
+</h4>
 
-## ORM
-- Forma de abstrair nosso banco de dados.
-- Tabelas do nosso BD viram models.
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/andersonsts/api-gobarber-node">
 
-## MANIPULAÇÃO DE DADOS
-- Sem SQL
-- Apenas código JavaScript
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/andersonsts/api-gobarber-node">
 
-## MIGRATIONS
-- Controle de versão para base de dados;
-- Cada arquivo contém instruções para criação, alteração ou remoção de tabelas
-  ou colunas;
-- Mantém a base de dados atualizada entre todos os desenvolvedores do time e também
-  no ambiente de produção;
-- Cada arquivo é uma migration e sua ordenação ocorre por data;
-- JAMAIS edite uma migration que ja foi processada. Se for necessário realizar alguma
-  modificação, é necessário realizar outra migration.
-- É possivel desfazer uma migration se errarmos, enquanto estivermos em ambiente de               desenvolvimento.
-- Cada migration deve realizar alteraçôes em apenas UMA tabela.
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/andersonsts/api-gobarber-node">
 
-## SEEDS
-- Populam nossa base de dados para desenvolvimento;
-- Muito utilizado para popular dados para testes;
-- Executaveis apenas por código;
-- Jamais serão usados para produção;
-- Caso sejam dados que precisam ir para produção, a própria migration pode manipular
-  dados das tabelas;
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/andersonsts/api-gobarber-node">
 
-## ARQUITETURA MVC
- ### MODEL ->
-  Armazena a abstração do banco
- ### CONTROLLER ->
-  Ponto de entrada das requisições de nossa aplicação. Incluem
-  nossas regras de negócio.
- ### VIEW ->
-  View é o retorno ao cliente. Em casos de aplicações envolvendo API REST, nossa view é apenas
-  JSON que é retornado para nosso front-end, e manipulado pelo React e React Native.
+  <img alt="Repository issues" src="https://img.shields.io/github/issues/andersonsts/api-gobarber-node">
+</p>
 
-## A FACE DE UM CONTROLLER
-  Classes;
-  Sempre retorna um JSON;
-  Não chama outro controller/método;
+<p align="center">
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-executar">Executar</a>
+</p>
 
-  Apenas 5 métodos;
-  Estou falando da mesma ENTIDADE? Se sim, criamos um controller.
+## :rocket: Tecnologias
 
-  index() -> Listagem de users,
-  show() -> Exibe um user,
-  store() -> Cria um user,
-  update() -> Atualiza um user,
-  delete() -> Deleta um user
+Este projeto foi desenvolvido no [Bootcamp GoStack - Rocketseat](https://rocketseat.com.br/bootcamp), com as seguintes tecnologias:
 
+-  [ReactJS](https://reactjs.org/)
+-  [Redux](https://redux.js.org/)
+-  [Redux-Saga](https://redux-saga.js.org/)
+-  [React Router Dom](https://github.com/ReactTraining/react-router)
+-  [Axios](https://github.com/axios/axios)
+-  [History](https://www.npmjs.com/package/history)
+-  [Immer](https://github.com/immerjs/immer)
+-  [Polished](https://polished.js.org/)
+-  [Rocketseat/unform](https://github.com/Rocketseat/unform)
+-  [React-Toastify](https://fkhadra.github.io/react-toastify/)
+-  [React-Perfect-Scrollbar](https://github.com/goldenyz/react-perfect-scrollbar)
+-  [styled-components](https://www.styled-components.com/)
+-  [React-Icons](https://react-icons.netlify.com/)
+-  [Reactotron](https://infinite.red/reactotron)
+-  [Date-fns](https://date-fns.org/v1.30.1)
+-  [Yup](https://github.com/jquense/yup)
+-  [VS Code][vc] com [EditorConfig][vceditconfig], [ESLint][vceslint] e [Prettier](https://github.com/prettier/prettier-eslint)
 
-# CONCEITOS JWT (JSON WEB TOKEN)
-- AUTENTICAÇÃO JWT
-  POST http://api.com/sessions
-  {
-    "email": "anderson@gmail.com",
-    "password": "123456"
-  }
+## :bookmark_tabs: Requisitos
+Antes de executar a aplicação, insira em seu terminal o comando abaixo para iniciar
+a api utilizando [json-server](https://github.com/typicode/json-server).
 
-  Se tiver correto, o token jwt é gerado:
-  dhbwuebfewnwubn324.324j1ifhf1uf1njfeh.12f33u7g811fub44n1
+```bash
+# Executa a api na porta 3333
+$ json-server server.json -p 3333 -w
 
-  A primeira parte até o primeiro ponto se chama Headers (tipo do token);
-  A segunda parte até o proximo ponto se chama payload (podemos guardar algumas informações
-            aqui dentro como o id do user)
-  A terceira parte se chama assinatura do token (Garante que o token não foi modificado por               outro usuário por exemplo)
+```
+
+## :information_source: Executar
+Para clonar e executar essa aplicação você precisa do [Git](https://git-scm.com), [Node.js v10.16][nodejs] ou superior + [Yarn v1.13][yarn] ou superior instalado em sua máquina. Em seu terminal de comando, execute:
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/andersonsts/api-gobarber-node
+
+# Entre no repositorio
+$ cd api-gobarber-node
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação
+$ yarn start
+```
+
+---
+
+:rocket: Feito por Anderson Santos :wave: [Entre em contato!](https://www.linkedin.com/in/andersonst-dev)
 
 
-
-
-
-
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 
