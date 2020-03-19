@@ -53,12 +53,13 @@ Este projeto utiliza as seguintes tecnologias:
 -  [Date-fns](https://date-fns.org/)
 -  [VS Code][vc] com [EditorConfig][vceditconfig], [ESLint][vceslint] e [Prettier](https://github.com/prettier/prettier-eslint)
 
-## :key: Requisitos
-
-
 ## :computer: Funcionalidades
-Essa API possui as seguintes funcionalidades:
-
+Segue abaixo algumas das funcionalidades da aplicação:
+- Cadastro e login de prestadores de serviço
+- Listar agendamentos marcados (por parte do prestador de serviço e do usuário)
+- Cancelar agendamentos, desde que seja realizado com 2 horas de antecedência
+- Upload de imagem para edição da foto de perfil do prestador de serviço
+- Envio de email para o prestador de serviço quando o agendamento for realizado
 
 ## :information_source: Executar
 Para clonar e executar essa aplicação você precisa do [Git](https://git-scm.com), [Node.js v10.16][nodejs] ou superior + [Yarn v1.13][yarn] ou superior instalado em sua máquina. Em seu terminal de comando, execute:
@@ -76,6 +77,8 @@ $ yarn install
 # Execute a aplicação
 $ yarn dev
 ```
+
+:exclamation: Para conhecer o frontend dessa aplicação, acesse: [GoBarber - React](https://github.com/andersonsts/gobarber-react)
 
 ---
 
